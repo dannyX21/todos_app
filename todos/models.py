@@ -3,6 +3,7 @@ from django.db import models
 class Todo(models.Model):
     class Meta:
         db_table = 'todos'
+        managed = True
 
     user = models.ForeignKey('users.User', null=False, blank=False, on_delete=models.CASCADE)
     name = models.CharField(max_length=64, null=False, blank=False)

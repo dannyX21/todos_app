@@ -20,6 +20,7 @@ class User(AbstractBaseUser):
 
     class Meta:
         db_table = 'users'
+        managed = True
 
     def get_full_name(self):
         return f'{self.first_name} {self.last_name}'
